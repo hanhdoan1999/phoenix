@@ -208,6 +208,7 @@ main, .foot { position: relative; z-index: 1; }
 .p-top b { color: var(--accent); font-weight: 500; }
 .project h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.25; letter-spacing: -0.035em; }
 .project .sub { color: var(--muted); max-width: 60ch; }
+.p-link { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; word-break: break-all; }
 .more { margin-top: 0.3rem; border-top: 1px solid var(--line); }
 .more summary { list-style: none; cursor: pointer; padding-block: 0.85rem 0.2rem; font: 500 0.78rem var(--font-mono); color: var(--fg); display: flex; justify-content: space-between; gap: 1rem; }
 .more summary::-webkit-details-marker { display: none; }
@@ -410,9 +411,24 @@ body.is-nox .nox { opacity: 1; }
         <button class="fchip" type="button" data-filter="fullstack" aria-pressed="false">Fullstack</button>
         <button class="fchip" type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
         <button class="fchip" type="button" data-filter="ai" aria-pressed="false">AI</button>
+        <button class="fchip" type="button" data-filter="supabase" aria-pressed="false">Supabase</button>
       </div>
 
       <div class="projects">
+        <article class="project" data-tags="fullstack supabase" data-reveal>
+          <div class="p-top"><span><b>&#9670;</b> Side project &middot; Live demo</span><span>2026</span></div>
+          <h3>RayTracker, a quarterly target tracker</h3>
+          <p class="sub">Splits one quarterly target into months and ISO weeks, grades every week against three lines and shows mid-week whether you are ahead.</p>
+          <div class="chips"><span class="chip">NextJS</span><span class="chip">TypeScript</span><span class="chip">Supabase</span></div>
+          <details class="more"><summary>Features and demo</summary><div class="more-body"><dl class="meta"><div><dt>Role</dt><dd>Fullstack, solo</dd></div><div><dt>Demo</dt><dd><a class="p-link" href="https://raytracker-demo-one.vercel.app/" target="_blank" rel="noopener">raytracker-demo-one.vercel.app &nearr;</a></dd></div></dl><ul class="points"><li>Splits a quarterly target into three months and their ISO weeks, with On target, Overachieved and Banger lines on every period. Weekly logging takes one field on desktop or phone, and weeks roll up to month and quarter.</li><li>Pace projection shows where you will land and which periods need attention, across five statuses from Banger to Off track, plus streaks of on-target weeks.</li><li>PNG share cards for any week, month or quarter, sized for X, LinkedIn and Stories.</li><li>Email digests: a Monday recap, a monthly result and a quarter scorecard.</li></ul></div></details>
+        </article>
+        <article class="project" data-tags="fullstack ai supabase" data-reveal>
+          <div class="p-top"><span><b>&#9670;</b> Side project &middot; Live demo</span><span>2026</span></div>
+          <h3>EventPass, QR check-in with AI follow-ups</h3>
+          <p class="sub">Guests check in to live events by QR code and a one-time email code. Each guest who opts in gets one AI-written follow-up afterwards.</p>
+          <div class="chips"><span class="chip">NextJS</span><span class="chip">TypeScript</span><span class="chip">Supabase</span><span class="chip">AI</span><span class="chip">UK GDPR</span></div>
+          <details class="more"><summary>Features and demo</summary><div class="more-body"><dl class="meta"><div><dt>Role</dt><dd>Fullstack, solo</dd></div><div><dt>Demo</dt><dd><a class="p-link" href="https://eventpass-demo-phi.vercel.app/" target="_blank" rel="noopener">eventpass-demo-phi.vercel.app &nearr;</a></dd></div></dl><ul class="points"><li>Organizers create an event and get a QR code, a printable poster and a full-screen present mode for the projector.</li><li>Guests join with a QR code and an emailed one-time code. Follow-ups stay off until the guest opts in.</li><li>AI writes each follow-up from the guest's profile, goals and organizer notes. Every message has an unsubscribe link, and failed sends retry up to three times.</li><li>Privacy is enforced in the database: organizers see name, company, job title and follow-up status, while contact details stay private. Consent is recorded with the policy version, and guests can delete their data at any time. Data is also deleted automatically after the event.</li></ul></div></details>
+        </article>
         <article class="project" data-tags="fullstack ai" data-reveal>
           <div class="p-top"><span><b>&#9670;</b> Mediacorp &middot; Singapore</span><span>Dec 2025 &ndash; Now</span></div>
           <h3>Telegram AI Chatbot &amp; Admin Dashboard</h3>
@@ -427,7 +443,7 @@ body.is-nox .nox { opacity: 1; }
           <div class="chips"><span class="chip">NextJS 14</span><span class="chip">ReactJS 18</span><span class="chip">TypeScript</span><span class="chip">Tailwind CSS</span><span class="chip">Zustand</span><span class="chip">React Query</span></div>
           <details class="more"><summary>Role and details</summary><div class="more-body"><dl class="meta"><div><dt>Role</dt><dd>Frontend</dd></div><div><dt>Period</dt><dd>Dec 2025 &ndash; Present</dd></div><div><dt>Team</dt><dd>4 people</dd></div></dl><ul class="points"><li>Built the AI Grading module, &ldquo;Mark For Me&rdquo;: students upload homework as a PDF or image and receive automatic grading with rubric-based feedback.</li><li>Onboarded into the codebase of a live platform (wizztutor.com). Implemented a Math Editor with MathLive and KaTeX, and a Drawing Canvas with Tldraw for students.</li></ul></div></details>
         </article>
-        <article class="project" data-tags="fullstack" data-reveal>
+        <article class="project" data-tags="fullstack supabase" data-reveal>
           <div class="p-top"><span><b>&#9670;</b> Moonshot &middot; Singapore</span><span>Jun 2024 &ndash; Jun 2025</span></div>
           <h3>Moonshot Admin Dashboard</h3>
           <p class="sub">An end-to-end admin system for a marketplace of 200+ games and 500+ users, with 15+ management modules.</p>
